@@ -9,7 +9,7 @@ app.config(function($routeProvider) {
 
 		.when('/about', {
 			templateUrl: 'app/templates/aboutTmpl.html',
-			// controller: 'aboutCtrl'
+			controller: 'aboutCtrl'
 		})
 
 		.when('/featured-clients', {
