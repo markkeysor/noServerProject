@@ -1,0 +1,461 @@
+/** {
+	outline: red solid 1px;
+}*/
+
+.clear {
+	clear:both;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	/*flex-wrap: wrap;*/
+	/*height: 100%;*/
+
+}
+
+/*//////////// HEADER IMG //////////////////*/
+
+.header-img {
+	background-image: url("img/header-img.jpg");
+	width: 100%;
+	margin: auto;
+	height: 550px;
+	background-repeat: no-repeat;
+	background-color: #ccc;
+	background-position-y: -104px;
+}
+
+.header-img h2 {
+    font-family: "jaf-facitweb", sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 80px;
+    opacity: .6;
+    position: relative;
+    top: 38%;
+    left: 7%;
+    /*text-shadow: 1px 1px 5px #4A4949;*/
+
+}
+
+.header-img h3 {
+font-family: "jaf-facitweb", sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 32px;
+    font-weight: lighter;
+    opacity: .6;
+    position: relative;
+    top: 38%;
+    left: 7%;
+    text-shadow: 1px 1px 5px #272727;
+}
+
+.about-img {
+	background-image: url("img/header-img.jpg");
+	width: 100%;
+	margin: auto;
+	height: 580px;
+	background-repeat: no-repeat;
+	background-color: #ccc;
+	background-position-y: -104px;
+}
+
+/*/////////// HEADER STYLING //////////////*/
+
+header {
+	background-color: transparent;
+	width: 100%;
+	height: 65px;
+	box-sizing: border-box;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+	display: inline-block;
+	float: left;
+	color: white;
+	font-family: "jaf-facitweb", sans-serif;
+	margin: 0;
+	padding-left:144px;
+	font-size: .9em;
+
+}
+
+header nav {
+	display: inline-block;
+	float: right;
+	font-family: "jaf-facitweb", sans-serif;
+	font-weight: lighter;
+	font-size: .8em;
+	padding-right: 144px;
+	color: white;
+
+
+}
+
+nav a {
+	padding: 14px 12px;
+}
+
+nav a:hover {
+	background-color: #36b0b4;
+	transition: all .4s ease-in-out;
+
+
+}
+
+hr {
+	clear: both;
+/*	width: 80%;*/
+    border-bottom: .5px solid;
+    opacity: 1;
+    position: relative;
+    top: -3%
+
+}
+
+.about-h1 {
+	text-align: center;
+	font-family: "jaf-facitweb", sans-serif;
+	color: #4A4A4A;
+    margin-left: 30px;
+    padding: 0;
+}
+
+/*/////////// SIDEBAR //////////////*/
+
+.contact-details {
+	float: left;
+	width: 210px;
+	border-right: 1px solid lightgray;
+	margin: 20px 0;
+	/*height: 100%;*/
+
+}
+
+.side-header {
+	background-color: #4a4a4a;
+	color: white;
+	font-family: "jaf-facitweb", sans-serif;
+	width: 150px;
+	padding: 5px 0;
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+}
+
+.side-header h3 {
+	margin: 0;
+	font-size: .9em;
+}
+
+
+.contact-details p {
+	font-size: .9em;
+	margin: 0;
+	color: #767676;
+}
+
+.contact-details img {
+	height: 16px;
+	width: 16px;
+	justify-content: space-between;
+}
+
+/*/////////// ARTIST CARDS //////////////*/
+
+#artists {
+	/*float: left;*/
+	justify-content: space-around;
+	font-family: "jaf-facitweb", sans-serif;
+	margin: 20px;
+	width: 200px;
+	/*width: calc(100% - 2px);*/
+    padding: 20px;
+    border-radius: 18px;
+	box-shadow: 1px 1px 3px #D8D8D8;
+    color: #4A4A4A;
+    background-color: #F0F0F0;
+    border: 7px solid white;
+
+}
+
+#artists:hover {
+	background-color: #FFF;
+	opacity: .6;
+	transition: background-color .5s ease-in-out;
+}
+
+#artists img {
+	border-radius: 150px;
+	box-shadow: 1px 1px 10px #ddd;
+	height: 160px;
+	width: 160px;
+	/*position: relative;
+    left: 14px;*/
+    background-color: white;
+    border: 6px solid white;
+
+}
+
+
+
+#artists span {
+	clear:both;
+}
+
+#artists hr {
+    width: 80%;
+    border-bottom: .5px solid;
+    opacity: .2;
+}
+
+#name {
+	margin: 0;
+	font-size: 1.4em;
+	font-weight: "jaf-facitweb", bold;
+	color:#38bbbf;
+	display: flex;
+    justify-content: center;
+    letter-spacing: 2px
+}
+
+#position {
+    margin: 0;
+    font-weight: 300;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    color: #9C9C9C;
+    position: relative;
+    top: -13px;
+    letter-spacing: 2px;
+}
+
+#bio, #services {
+	margin: 3px 0px;
+	padding: 15px 0px;
+	font-size: .9em;
+	color: #7D7D7D;
+}
+
+/*#slide-up {
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	opacity: .4;
+	position: relative;
+	bottom: -60px;
+	overflow: hidden;
+}*/
+
+/*/////////// INDEX CONTENT STYLING //////////////*/
+.home-content {
+	font-family: "jaf-facitweb", sans-serif;
+	color: #4A4A4A;
+    margin-left: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.home-content h1 {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.home-content h2 {
+	margin: 0;
+	font-weight: lighter;
+	padding-top: 3px;
+	font-size: 1.2em;
+	color: #999;
+	text-align: center;
+}
+
+.monthly-special {
+	width: 45%;
+    border: 2px solid #38bbbf;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px;
+    /* box-sizing: border-box; */
+    font-size: .8em;
+    position: relative;
+    left: 23.5%;
+}
+
+.monthly-special h4 {
+	margin: 0;
+	font-size: 1.1em;
+	text-align: center;
+	color: #38BBBF;
+}
+
+.monthly-special p {
+	margin: 0;
+	color: #666;
+}
+
+.monthly-special strong {
+	color: #38bbbf;
+	font-size: 1.1em;
+}
+
+.info-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.book-me {
+    background-color: #38bbbf;
+    border: 2px solid #38bbbf;
+    border-radius: 10px;
+    width: 225px;
+    height: 50px;
+    margin-right: 30px;
+    color: white;
+	font-family: "jaf-facitweb", sans-serif;
+	text-align: center;
+}
+
+.book-me h3{
+    position: relative;
+    top: -7px;
+}
+
+.book-me:hover {
+	background-color: white;
+	color: #38bbbf;
+}
+
+
+.request-training {
+	color: white;
+    background-color: #38bbbf;
+    border: 2px solid #38bbbf;
+    border-radius: 10px;
+    width: 225px;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.request-training h3{
+	font-family: "jaf-facitweb", sans-serif;
+	text-align: center;
+    position: relative;
+    top: -7px;
+}
+
+.request-training:hover {
+	background-color: white;
+	color: #38bbbf;
+}
+
+/*//////////// VIDEO STYLING /////////////*/
+
+iframe {
+	border: 15px solid white;
+	box-shadow: 1px 1px 5px #ccc;
+	margin: 25px;
+}
+
+ 
+/*/////////// FOOTER //////////////*/
+
+footer {
+	clear: both;
+	background-color: #dddddd;
+	height: 45px;
+	margin: auto;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+footer p {
+	display: inline-block;
+	margin: 0;
+	color: white;
+	font-weight: "jaf-facitweb", lighter;
+	font-family: sans-serif;
+	font-size: .7em;
+	padding: 15px;
+}
+
+footer img {
+	height: 12px;
+	width: 12px;
+	display: inline-block;
+	margin: auto;
+	margin: 0;
+	padding: 3px;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
+};
+
+
+
+
+////////////// MOBILE /////////////////
+
+@media (max-width: 1311px) {
+
+	#name {
+	margin: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	color:#38bbbf;
+	display: flex;
+    justify-content: center;
+    letter-spacing: 2px
+}
+
+	#position {
+	    margin: 0;
+	    font-weight: 300;
+	    font-size: .9em;
+	    display: flex;
+	    justify-content: center;
+	    color: #9C9C9C;
+	    position: relative;
+	    top: -13px;
+	    letter-spacing: 2px;
+	}
+
+	#bio, #services {
+		margin: 3px 0px;
+		padding: 15px 0px;
+		font-size: .9em;
+		color: #7D7D7D;
+	}
+
+	#artists {
+	flex-wrap: wrap;
+
+}
+
+};

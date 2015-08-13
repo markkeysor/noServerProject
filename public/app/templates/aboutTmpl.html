@@ -1,0 +1,26 @@
+<div class="header-img">
+	<header-directive></header-directive>
+	<hr>
+</div>
+<br/>
+<br />
+<h1 class="about-h1">The Magg's Lashes Team</h1>
+<div class="container">
+	<side-directive></side-directive>
+	<div id="artists"ng-repeat="item in data">
+		<img src="{{item.photo}}"><br /><br />
+		<hr>
+		<br />
+		<span id="name">{{item.name}}</span><br />
+		<span id="position">{{item.position | uppercase}}</span>
+	<!-- 	<div id="slide-up"></div> -->
+
+
+
+		<!-- <br /><br>
+		<span id="services">{{'"'+ item.bio +'"'}}</span><br />
+		<span id="bio">{{"Services offered: "+ item.services}}</span><br />
+		<br /> -->
+	</div>
+</div>	
+<footer-directive></footer-directive>
