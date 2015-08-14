@@ -12,13 +12,12 @@ app.config(function($routeProvider) {
 			controller: 'aboutCtrl'
 		})
 
-		.when('/featured-clients', {
-			templateUrl: 'app/templates/clientsTmpl.html',
-			// controller: 'clientsCtrl'
+		.when('/sign-in-up', {
+			templateUrl: 'app/templates/registerTmpl.html',
+			controller: 'usersCtrl'
 		})
 
 		.otherwise ({
 			redirectTo: '/'
 		})
 });
-
