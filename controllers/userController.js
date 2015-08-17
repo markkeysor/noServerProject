@@ -5,8 +5,10 @@ module.exports = {
   create: function(req, res) {
     var newUserDocument = new User(req.body);
     newUserDocument.save(function(err, result) {
-      if (err) return res.status(500).send(err);
-      res.send(result);
+      if (err) {
+        console.log(newUserDocument);
+        return res.status(418).send(err);
+      } res.send(result);
     });
   },
 

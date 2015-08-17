@@ -374,7 +374,7 @@ iframe {
 	margin: 25px;
 }
 
- 
+
 /*/////////// FOOTER //////////////*/
 
 footer {
@@ -393,8 +393,8 @@ footer p {
 	display: inline-block;
 	margin: 0;
 	color: white;
-	font-weight: "jaf-facitweb", lighter;
-	font-family: sans-serif;
+	font-weight: lighter;
+	font-family: "jaf-facitweb", sans-serif;
 	font-size: .7em;
 	padding: 15px;
 }
@@ -417,10 +417,19 @@ a:visited {
 	color: inherit;
 };
 
+/*//////// REGISTER/LOGIN PAGE ///////////*/
+
+#login {
+	height: 500px;
+	width: 300px;
+	background-color: #38bbbf;
+	color: white;
+	font-family: "jaf-facitweb", sans-serif;
+	font-weight: 400;
+}
 
 
-
-////////////// MOBILE /////////////////
+/*////////////// MOBILE /////////////////*/
 
 @media (max-width: 1311px) {
 
