@@ -1,4 +1,4 @@
-var app = angular.module('maggsLashes', ['ngRoute']);
+var app = angular.module('maggsLashes', ['ngRoute', 'ui.calendar']);
 
 app.config(function($routeProvider) {
 	$routeProvider
@@ -17,7 +17,17 @@ app.config(function($routeProvider) {
 			controller: 'usersCtrl'
 		})
 
+		.when('/dashboard', {
+			templateUrl: 'app/templates/dashboardTmpl.html',
+			// controller: 'dashboardCtrl'
+		})
+
+		.when('/calendar', {
+			templateUrl: 'app/templates/calendarTmpl.html',
+			controller: 'calendarCtrl'
+		})
+
 		.otherwise ({
 			redirectTo: '/'
-		})
+		});
 });

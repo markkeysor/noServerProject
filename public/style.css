@@ -18,6 +18,7 @@ html, body {
 	margin: auto;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	/*flex-wrap: wrap;*/
 	/*height: 100%;*/
 
@@ -374,6 +375,72 @@ iframe {
 	margin: 25px;
 }
 
+/*//////// REGISTER/LOGIN PAGE ///////////*/
+
+#register {
+	width: 533px;
+	padding: 20px;
+	margin-top: 130px;
+	background-color: white;
+	border: 1px solid #d7d7d7;
+	border-radius: 20px;
+	color: white;
+	font-family: "jaf-facitweb", sans-serif;
+	font-weight: 400;
+}
+
+#register h1 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #38bbbf;
+}
+
+.form {
+		font-family: "jaf-facitweb", sans-serif;
+}
+
+.input {
+	height: 40px;
+	width: 254px;
+	padding: 20px;
+	font-family: "jaf-facitweb", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	margin: 5px;
+	color: #797979;
+	outline-color: #38bbbf;
+}
+
+#register button {
+	margin: 15px 5px;
+	border: none;
+	font: inherit;
+	line-height: normal;
+	width: 98%;
+	height: 50px;
+	font-family: "jaf-facitweb", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	background-color: #38bbbf;
+	color: white;
+}
+
+#register button:hover {
+	margin: 15px 5px;
+	border: none;
+	font: inherit;
+	line-height: normal;
+	width: 98%;
+	height: 50px;
+	font-family: "jaf-facitweb", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	background-color: #2f9b9f;
+	color: white;
+}
+
+
 
 /*/////////// FOOTER //////////////*/
 
@@ -417,17 +484,6 @@ a:visited {
 	color: inherit;
 };
 
-/*//////// REGISTER/LOGIN PAGE ///////////*/
-
-#login {
-	height: 500px;
-	width: 300px;
-	background-color: #38bbbf;
-	color: white;
-	font-family: "jaf-facitweb", sans-serif;
-	font-weight: 400;
-}
-
 
 /*////////////// MOBILE /////////////////*/
 
@@ -439,8 +495,8 @@ a:visited {
 	font-weight: bold;
 	color:#38bbbf;
 	display: flex;
-    justify-content: center;
-    letter-spacing: 2px
+  justify-content: center;
+  letter-spacing: 2px
 }
 
 	#position {

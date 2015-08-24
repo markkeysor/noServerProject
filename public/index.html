@@ -2,6 +2,7 @@
 <head>
 	<title>Magg's Lashes</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.css"/>
 	<script src="//use.typekit.net/uom3rmy.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
@@ -15,6 +16,14 @@
 <!-- /////// ANGULAR ////////  -->
 	<script src="https://code.angularjs.org/1.4.3/angular.js"></script>
 	<script src="https://code.angularjs.org/1.4.3/angular-route.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-calendar/1.0.0/calendar.js"></script>
+
+	<!-- ///// FULLCALENDAR STUFF ///// -->
+	<script src="http://momentjs.com/downloads/moment.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/fullcalendar.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.4.0/gcal.js"></script>
+
 
 	<!-- ///// APP /////  -->
 	<script src="app.js"></script>
@@ -23,9 +32,10 @@
 	<script src="app/controllers/mainCtrl.js"></script>
 	<script src="app/controllers/aboutCtrl.js"></script>
 	<script src="app/controllers/usersCtrl.js"></script>
+	<script src="app/controllers/calendarCtrl.js"></script>
+	<script src="app/controllers/dashboardCtrl.js"></script>
 
 	<!-- ///// CUSTOM DIRECTIVES //////  -->
-
 	<script src="app/directives/headerDirective.js"></script>
 	<script src="app/directives/sideDirective.js"></script>
 	<script src="app/directives/footerDirective.js"></script>
@@ -33,5 +43,6 @@
 	<!-- ////// SERVICES //////  -->
 	<script src="app/services/mainService.js"></script>
 	<script src="app/services/registerService.js"></script>
+	<script src="app/services/calendarService.js"></script>
 </body>
 </html>

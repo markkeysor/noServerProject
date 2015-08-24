@@ -1,24 +1,24 @@
-<div class="header-img">
+<!-- <div class="header-img">
 		<header-directive></header-directive>
 		<hr>
-</div>
+</div> -->
 <div class="container">
-	<div class="login">
-	  <h2>Register</h2>
-	  <form class="" ng-submit="users(newUser)">
-	    <h4>First Name</h4>
-	    <input type="text" ng-model="newUser.first_name">
-	    <h4>Last Name</h4>
-	    <input type="text" ng-model="newUser.last_name">
-	    <h4>Email</h4>
-	    <input type="text" ng-model="newUser.email">
-	    <h4>Password</h4>
-	    <input type="text" ng-model="newUser.password">
-	    <h4>Confirm Password</h4>
-	    <input type="text" ng-model="newUser.confirm">
+	<div id="register">
+	  <h1>REGISTER</h1><br />
+	  <form class="form" method="post" ng-submit="users(newUser)">
+	    <!-- <h4>First Name</h4> -->
+	    <input type="text" class="input" placeholder="First Name" ng-model="newUser.first_name">
+	    <!-- <h4>Last Name</h4> -->
+	    <input type="text" class="input" placeholder="Last Name" ng-model="newUser.last_name">
+	    <!-- <h4>Email</h4> -->
+	    <input type="text" class="input" placeholder="Email" ng-model="newUser.email">
+	    <!-- <h4>Password</h4> -->
+	    <input type="password" class="input" placeholder="Password" ng-model="newUser.password">
+	    <!-- <h4>Confirm Password</h4> -->
+	    <!-- <input type="text" class="input" placeholder="Confirm" ng-model="newUser.confirm"> -->
 	    <br />
 	    <button type="button" ng-click="users(newUser)">REGISTER</button>
 	  </form>
 	</div>
 </div>
-<footer-directive></footer-directive>
+<!-- <footer-directive></footer-directive> -->
