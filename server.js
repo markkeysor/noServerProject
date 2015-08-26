@@ -7,6 +7,7 @@
  var moment = require('moment');
 //// CONTROLLERS //////
 var UserCtrl = require('./controllers/userController');
+var AptCtrl = require('./controllers/appointmentCtrl');
 
 ///// MIDDLEWARE /////
 var port = 3333;
@@ -16,11 +17,17 @@ app.use(express.static('public'));
 app.use(cors());
 
 
-///// ENDPOINTS /////
+///// USER REGISTRATION ENDPOINTS /////
 app.post('/user', UserCtrl.create);
 app.get('/user', UserCtrl.read);
 app.put('/user/:id', UserCtrl.update);
 app.delete('/user/:id', UserCtrl.delete);
+
+///// APPOINTMENT ENDPOINTS /////
+app.post('/appt', AptCtrl.create);
+app.get('/appt', AptCtrl.read);
+app.put('/appt/:id', AptCtrl.update);
+app.delete('/appt/:id', AptCtrl.delete);
 
 
 /////// CONNECTIONS ////////

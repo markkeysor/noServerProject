@@ -1,1 +1,12 @@
-<div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
+<div ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="maggieCalendar"></div>
+<modal-dialog show='modalShown' width='750px' height='60%'>
+  <h2>Add Appointment</h2>
+  <h3>Service:</h3>
+  <select class="" name="Choose Service" placeholder="Choose Service" ng-model="service" ng-options="service.name for service in services">
+  </select>
+  <h3>Price:</h3>
+  {{service.price}} Time: {{service.time}}
+  <h3>Comments:</h3>
+  <input type="textarea" name="Comments" value="">
+  <button type="button" name="book">BOOK APPOINTMENT</button>
+</modal-dialog>
