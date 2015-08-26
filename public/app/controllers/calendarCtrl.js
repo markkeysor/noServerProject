@@ -16,7 +16,6 @@ app.controller('calendarCtrl', function($scope, calendarService){
   $scope.uiConfig = {
     calendar: {
       height: 400,
-      editable: true,
       header: {
         left: 'agendaWeek,agendaDay',
         center: 'title',
@@ -30,30 +29,50 @@ app.controller('calendarCtrl', function($scope, calendarService){
       allDaySlot: false,
       selectable: true,
       select: function(start, end, allDay) {
-        var title = $scope.toggleModal();
-        if(title) {
-            $scope.uiConfig.fullCalendar('renderEvent', {
-            title: title,
-            start: start,
-            end: end
-          },
-          true
-        );
-        }
+        $scope.toggleModal();
+        $scope.momentSelected = moment().format();
+        console.log($scope.momentSelected);
       }
     }
   };
 
     $scope.services = [
-        {id: 1, name: "Classic Full Set", price:"$95", time:"2 Hours"},
-        {id: 2, name: "Volume Full Set", price:"$140", time:"3 Hours"},
-        {id: 3, name: "Classic Fill", price:"$45", time:"1 Hour 15 Minutes"},
-        {id: 4, name: "Volume Fill", price:"$60", time:"1 Hour 30 Minutes"}
+        {id: 1, name: "Classic Full Set", price:"$" + 95, time:"2 Hours"},
+        {id: 2, name: "Volume Full Set", price:"$" + 140, time:"3 Hours"},
+        {id: 3, name: "Classic Fill", price:"$" + 45, time:"1 Hour 15 Minutes"},
+        {id: 4, name: "Volume Fill", price:"$" + 60, time:"1 Hour 30 Minutes"}
       ];
+
+    $scope.eventLength = function(lashService) {
+          if(lashService.id === 1) {
+            console.log("Classic Full Set");
+          }
+          else if(lashService.id === 2) {
+              console.log("Volume Full Set");
+          }
+          else if(lashService.id === 3) {
+              console.log("Classic Fill");
+          }
+          else if(lashService.id === 4) {
+              console.log("Volume Fill");
+          }
+    };
 
 $scope.modalShown = false;
  $scope.toggleModal = function() {
    $scope.modalShown = !$scope.modalShown;
+ };
+
+ $scope.addNewEvent = function() {
+   var m = $scope.momentSelected;
+   console.log("I've been clicked!");
+   console.log(m);
+ //   var event = {
+ //     title: title,
+ //     start: start,
+ //     end: end
+ //   };
+ //   $scope.eventSources.events.push(event);
  };
 
 });

@@ -1,12 +1,12 @@
-var User = require('../models/Apt');
+var Apt = require('../models/Apt');
 
 module.exports = {
 
   create: function(req, res) {
-    var newUserDocument = new Apt(req.body);
-    newUserDocument.save(function(err, result) {
+    var newApt = new Apt(req.body);
+    newApt.save(function(err, result) {
       if (err) {
-        console.log(newUserDocument);
+        console.log(newApt);
         return res.status(418).send(err);
       } res.send(result);
     });
