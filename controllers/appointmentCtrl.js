@@ -5,10 +5,10 @@ module.exports = {
   create: function(req, res) {
     var newApt = new Apt(req.body);
     newApt.save(function(err, result) {
-      if (err) {
-        console.log(newApt);
-        return res.status(418).send(err);
-      } res.send(result);
+      if (!err) {
+        res.send(result);
+      }
+        return res.status(500).send(err);
     });
   },
 

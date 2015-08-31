@@ -1,15 +1,21 @@
-app.controller('calendarCtrl', function($scope, calendarService){
+app.controller('calendarCtrl', function($scope, appointmentService){
+
+  var getCollection = function() {
+    appointmentService.retrieveAppt().then(function(response) {
+      console.log(response);
+    });
+  }();
 
   $scope.eventSources = [
-    { events:
-      [
-        // {
-        //   title : 'Test Event',
-        //   start : '2015-08-25 10:00:00',
-        //   end : '2015-08-25 11:30:00'
-        // }
-      ]
-    }
+//     { events:
+// //     //   [
+// //     //     // {
+// //     //     //   title : 'Test Event',
+// //     //     //   start : '2015-08-25 10:00:00',
+// //     //     //   end : '2015-08-25 11:30:00'
+// //     //     // }
+// //     //   ]
+//     }
 ];
   /* config object */
   $scope.uiConfig = {
@@ -30,15 +36,9 @@ app.controller('calendarCtrl', function($scope, calendarService){
       select: function(start, end, allDay) {
         $scope.toggleModal();
         $scope.momentSelected = moment(start).format("YYYY-MM-DDTHH:mm:ss");
-        console.log($scope.momentSelected);
       },
-      // forceEventDuration: true,
-      // eventReceive: function(event){
-      //   event.end = event.start;
-      //   console.log(event.start.format());
-      //   event.end.add(2, 'h');
-      //   console.log(event.start.format());
-      //   }
+
+
   }
 };
 
@@ -58,12 +58,17 @@ $scope.modalShown = false;
  $scope.addNewEvent = function(service) {
    var endTime = moment($scope.momentSelected).add(service.value, 'm');
    var newEvent = {
-     title: service.name,
-     start: $scope.momentSelected,
-     end: endTime
+     title : service.name,
+     start : $scope.momentSelected,
+     end : endTime.format("YYYY-MM-DDTHH:mm:ss"),
    };
+
    $scope.eventSources[0].events.push(newEvent);
    $scope.toggleModal();
+   appointmentService.addAppointment(newEvent);
  };
+
+
+
 
 });

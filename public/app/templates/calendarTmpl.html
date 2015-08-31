@@ -2,7 +2,7 @@
 <modal-dialog show='modalShown' width='750px' height='60%'>
   <h2>Add Appointment</h2>
   <h3>Service:</h3>
-  <select class="" name="Choose Service" ng-model="service" ng-options="service.name for service in services" ng-change="eventLength(service)">
+  <select class="" name="Choose Service" ng-model="service" ng-options="service.name for service in services" ng-change="service">
   </select>
   <h3>Price:</h3>
   {{service.price}} <br>

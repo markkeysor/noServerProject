@@ -1,3 +1,0 @@
-app.service('calendarService', function(){
-
-});

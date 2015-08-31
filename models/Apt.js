@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
 var aptSchema = new mongoose.Schema({
-  title: {type: String, lowercase: true},
-  start: {type: String, lowercase: true},
-  end: {type: String, lowercase: true},
+  title: {type: String},
+  start: {type: String},
+  end: {type: String}
   // confirm: {type: String, required: true, lowercase: true}
 });
 
