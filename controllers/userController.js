@@ -9,7 +9,7 @@ module.exports = {
         console.log(newUserDocument);
         return res.status(418).send(err);
       } res.send(result);
-        res.redirect('public/app/templates/dashboardTmpl.html');
+        res.redirect('#/dashboard');
     });
   },
 

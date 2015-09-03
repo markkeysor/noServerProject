@@ -32,6 +32,10 @@ app.config(function($routeProvider) {
 			}
 		})
 
+		.when('/logout', {
+			redirectTo: '/'
+		})
+
 		.otherwise ({
 			redirectTo: '/'
 		});

@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "body-parser": "^1.13.3",
     "client-sessions": "^0.7.0",
     "cors": "^2.7.1",
