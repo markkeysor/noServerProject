@@ -1,13 +1,32 @@
-<div ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar="maggieCalendar"></div>
-<modal-dialog show='modalShown' width='750px' height='60%'>
-  <h2>Add Appointment</h2>
-  <h3>Service:</h3>
-  <select class="" name="Choose Service" ng-model="service" ng-options="service.name for service in services" ng-change="service">
-  </select>
-  <h3>Price:</h3>
-  {{service.price}} <br>
-  Time: {{service.time}}
-  <h3>Comments:</h3>
-  <input type="textarea" name="Comments" value="">
-  <button type="button" name="book" ng-click="addNewEvent(service)">BOOK APPOINTMENT</button>
-</modal-dialog>
+<second-header-directive></second-header-directive>
+<br />
+<div class="select-artist">
+	<h2>Select Lash Artist</h2>
+	<select ng-model="artistDropdown" name ="dropdown" id="dropdown">
+		<option  value="maggie" selected="selected">Maggie Keysor</option>
+		<option value="caylee">Caylee Clark</option>
+	</select>
+</div>
+<div class="clear"></div
+<hr />
+<div class="container">
+  <side-directive></side-directive>
+	<br />
+	<div class="calendar" ui-calendar="uiConfig.calendar" ng-model="eventSources" ng-show="artistDropdown== 'maggie'" calendar="maggieCalendar"></div>
+  <modal-dialog show='modalShown' width='550px' height='300px'>
+    <h2 class="modalh2">Add Appointment</h2><br />
+    <div class="modal-service-content">
+			<h3 class="modalh3">Service:</h3>
+			<select class="modal-select" name="Choose Service" ng-model="service" ng-options="service.name for service in services" ng-change="service">
+			</select>
+			<h3 class="modalh3">Price:</h3>
+			{{service.price}}
+			Time: {{service.time}}
+			<!-- <h3 class="modalh3">Comments:</h3>
+			<textarea class="modal-comments" name="comments" rows="6" cols="40"></textarea> -->
+    </div>
+		<div class="modal-button" type="button" name="book" ng-click="addNewEvent(service)">BOOK APPOINTMENT</div>
+  </modal-dialog>
+</div>
+<div class="clear"></div>
+<footer-directive></footer-directive>

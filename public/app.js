@@ -24,7 +24,12 @@ app.config(function($routeProvider) {
 
 		.when('/calendar', {
 			templateUrl: 'app/templates/calendarTmpl.html',
-			controller: 'calendarCtrl'
+			controller: 'calendarCtrl',
+			resolve: {
+				getappts: function(appointmentService) {
+					return appointmentService.retrieveAppt();
+				}
+			}
 		})
 
 		.otherwise ({
