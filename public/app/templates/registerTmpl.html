@@ -1,6 +1,17 @@
 <second-header-directive></second-header-directive>
-<div class="container">
-	<div id="register">
+<div class="container-two">
+<div id="register">
+	<h1>LOGIN</h1><br />
+	<form class="form" method="post" ng-submit="logUserIn(user)">
+		<input type="text" class="input" placeholder="Email" ng-model="user.email">
+		<!-- <h4>Password</h4> -->
+		<input type="password" class="input" placeholder="Password" ng-model="user.password">
+		<br />
+		<button type="button" ng-click="logUserIn(user)">LOGIN</button>
+	</form>
+</div>
+<br />
+	<div id="register" ng-model="register">
 	  <h1>REGISTER</h1><br />
 	  <form class="form" method="post" ng-submit="users(newUser)">
 	    <!-- <h4>First Name</h4> -->

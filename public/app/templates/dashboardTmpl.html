@@ -1,1 +1,16 @@
-HELLO WORLD
+<second-header>
+		<a href="#/"><img src="img/logo_white_text.png"></img></a>
+		<nav>
+			<a href="#/">HOME</a>
+			<a href="#/about">ABOUT</a>
+			<a href="#/calendar">BOOK APPOINTMENT</a>
+			<a href="#/" ng-click="logOut()">LOG OFF {{user.first_name | uppercase}}</a>
+		</nav>
+</second-header>
+<div class="container">
+  <side-directive></side-directive>
+      <h2>Hello {{user.first_name | capitalize}}!</h2>
+</div>
+
+<button type="button" name="button" ng-click="logOut()">Log Out</button>
+<footer-directive></footer-directive>

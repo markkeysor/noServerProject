@@ -40,7 +40,19 @@ select {
 	justify-content: space-around;
 	align-items: center;
 	/*flex-wrap: wrap;*/
-	/*height: 100%;*/
+	/*height: 85%;*/
+
+}
+
+.container-two {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	height: 85%;
 
 }
 
@@ -57,7 +69,7 @@ select {
 }
 
 .home-img-logo {
-	width: 40%;
+	width: 650px;
 	position: relative;
 	top: 223px;
 	left: 74px;
@@ -129,7 +141,7 @@ header img {
 	float: left;
 	color: white;
 	padding-left:103px;
-	width: 10%;
+	width: 135px;
 	position: relative;
 	top: 15px;
 
@@ -183,12 +195,12 @@ second-header {
   align-items: center;
 }
 
-second-header-directive img {
+second-header img {
 	display: inline-block;
 	float: left;
 	color: white;
 	padding-left:103px;
-	width: 10%;
+	width: 135px;
 	position: relative;
 	top: 14px;
 }
@@ -459,7 +471,7 @@ iframe {
 #register {
 	width: 533px;
 	padding: 20px;
-	margin: 130px;
+	margin: 0px 20px;
 	background-color: white;
 	border: 1px solid #d7d7d7;
 	border-radius: 20px;

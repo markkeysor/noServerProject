@@ -2,24 +2,30 @@ app.controller('calendarCtrl', function($scope, appointmentService, getappts){
 
   $scope.eventSources = [
     { events: getappts
-      // [
-      //   {
-      //     title : 'Test Event',
-      //     start : '2015-08-31T10:00:00',
-      //     end : '2015-08-31T10:00:00',
-      //     _id: "1231242432",
-      //     __v: 1
-      //   },
-      //   {
-      //     title : 'Test Event',
-      //     start : '2015-09-01T10:00:00',
-      //     end : '2015-09-01T10:00:00',
-      //     _id: "1231242432",
-      //     __v: 1
-      //   }
-      // ]
+
     }
 ];
+
+// $scope.eventSources1 = [
+//   { events: getappts
+//     // [
+//     //   {
+//     //     title : 'Test Event',
+//     //     start : '2015-08-31T10:00:00',
+//     //     end : '2015-08-31T10:00:00',
+//     //     _id: "1231242432",
+//     //     __v: 1
+//     //   },
+//     //   {
+//     //     title : 'Test Event',
+//     //     start : '2015-09-01T10:00:00',
+//     //     end : '2015-09-01T10:00:00',
+//     //     _id: "1231242432",
+//     //     __v: 1
+//     //   }
+//     // ]
+//   }
+// ];
 
   /* config object */
   $scope.uiConfig = {
@@ -27,8 +33,8 @@ app.controller('calendarCtrl', function($scope, appointmentService, getappts){
       height: 554,
       aspectRatio: 2,
       header: {
-        left: 'agendaWeek,agendaDay',
-        center: 'title',
+        left: 'title',
+        // center: 'title',
         right: 'today prev,next'
       },
       defaultView: 'agendaWeek',
@@ -68,6 +74,52 @@ app.controller('calendarCtrl', function($scope, appointmentService, getappts){
   }
 };
 
+// $scope.uiConfigCaylee = {
+//   calendar: {
+//     height: 554,
+//     aspectRatio: 2,
+//     header: {
+//       left: 'agendaWeek,agendaDay',
+//       center: 'title',
+//       right: 'today prev,next'
+//     },
+//     defaultView: 'agendaWeek',
+//     firstHour: '10:00',
+//     hiddenDays: [0],
+//     minTime: "10:00:00",
+//     maxTime: "20:00:00",
+//     allDaySlot: false,
+//     selectable: true,
+//     select: function(start, end, allDay) {
+//       var check = start._d.toJSON().slice(0,10);
+//       var today = new Date().toJSON().slice(0,10);
+//       if(check < today)
+//       {
+//           // Previous Day. show message if you want otherwise do nothing.
+//                   // So it will be unselectable
+//       }
+//       else
+//       {
+//         $scope.toggleModal();
+//         $scope.momentSelected = moment(start).format("YYYY-MM-DDTHH:mm:ss");
+//       }
+//
+//     },
+//     eventClick: function(calEvent, jsEvent, view) {
+//
+//       alert('Event: ' + calEvent.title);
+//       alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+//       alert('View: ' + view.name);
+//
+//       // change the border color just for fun
+//       $(this).css('border-color', 'red');
+//
+//   }
+//
+//
+// }
+// };
+
   $scope.services = [
         {id: 1, name: "Classic Full Set", price:"$" + 95, time:"2 Hours", value: 120},
         {id: 2, name: "Volume Full Set", price:"$" + 140, time:"3 Hours", value: 180},
@@ -94,10 +146,23 @@ $scope.modalShown = false;
    appointmentService.addAppointment(newEvent);
  };
 
- $(function() {
-    var select="maggie";
-    $("#dropdown").val(select);
-});
+ // $scope.addNewEventCaylee = function(service) {
+ //   var endTime = moment($scope.momentSelected).add(service.value, 'm');
+ //   var newEvent = {
+ //     title : service.name,
+ //     start : $scope.momentSelected,
+ //     end : endTime.format("YYYY-MM-DDTHH:mm:ss"),
+ //   };
+ //
+ //   $scope.eventSources1[0].events.push(newEvent);
+ //   $scope.toggleModal();
+ //   appointmentService.addAppointment(newEvent);
+ // };
+
+//  $(function() {
+//     var select="maggie";
+//     $("#dropdown").val(select);
+// });
 
 
 });

@@ -4,7 +4,8 @@
  var cors = require('cors');
  var mongoose = require('mongoose');
  // var sessions = require('client-sessions');
-
+// var passport = require('passport');
+// var LocalStrategy = require('passport-local').Strategy;
 
  var moment = require('moment');
 //// CONTROLLERS //////
@@ -17,6 +18,9 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(cors());
+// app.use(app.router);
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 
 ///// USER REGISTRATION ENDPOINTS /////

@@ -14,5 +14,18 @@ app.service('registerService', function($http, $q) {
     return dfd.promise;
   };
 
+  this.findByEmail = function(email){
+    return $http({
+      method: 'GET',
+      url: '/user?email=' + email
+    });
+  };
+
+  this.findById = function(_id){
+      return $http({
+        method: 'GET',
+        url: '/user?_id=' + _id
+      });
+    };
 
 });
