@@ -24,17 +24,20 @@ app.config(function($routeProvider) {
 				userBoiId: function($route){
 					return $route.current.params.id
 				}
+				//   // controller will not be loaded until $requireAuth resolves
+				//   // Auth refers to our $firebaseAuth wrapper in the example above
+					"currentAuth": ["Auth", function(Auth) {
+						// $requireAuth returns a promise so the resolve waits for it to complete
+						// If the promise is rejected, it will throw a $stateChangeError (see above)
+						return Auth.$requireAuth();
+					}]
 			}
-      // resolve: {
-      //   // controller will not be loaded until $requireAuth resolves
-      //   // Auth refers to our $firebaseAuth wrapper in the example above
-      //   "currentAuth": ["Auth", function(Auth) {
-      //     // $requireAuth returns a promise so the resolve waits for it to complete
-      //     // If the promise is rejected, it will throw a $stateChangeError (see above)
-      //     return Auth.$requireAuth();
-      //   }]
-      // }
-    })
+
+		})
+		// .when('/dashboard', {
+		// 		url: '/dashboard/:id'
+		// })
+
 
 .when('/calendar', {
   templateUrl: 'app/templates/calendarTmpl.html',
@@ -46,9 +49,6 @@ app.config(function($routeProvider) {
   }
 })
 
-.when('/logout', {
-  redirectTo: '/'
-})
 
 .otherwise({
   redirectTo: '/'

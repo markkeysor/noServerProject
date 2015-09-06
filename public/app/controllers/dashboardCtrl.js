@@ -11,7 +11,6 @@ app.controller('dashboardCtrl', function($scope, $firebaseAuth, $location, userB
 // }]);
 
   // console.log(auth);
-  console.log("Matt is pretty much awesome");
 
   ref.onAuth(function(authData) {
     if (authData) {
