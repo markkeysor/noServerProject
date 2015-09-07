@@ -1,24 +1,20 @@
-app.controller('dashboardCtrl', function($scope, $firebaseAuth, $location, userBoiId, registerService) {
+app.controller('dashboardCtrl', function($scope, $firebaseAuth, $location, userBoiId, registerService, appointmentService) {
 
-  $scope.user;
   var ref = new Firebase("https://maggslashes.firebaseio.com/");
 
   var auth = $firebaseAuth(ref);
-  console.log("userBoiId", userBoiId)
-//   app.controller("AccountCtrl", ["currentAuth", function(currentAuth) {
-//   // currentAuth (provided by resolve) will contain the
-//   // authenticated user or null if not logged in
-// }]);
+  console.log("userBoiId", userBoiId);
 
-  // console.log(auth);
 
   ref.onAuth(function(authData) {
     if (authData) {
+      // registerService.setUser(authData)
       console.log("User is authenticated with uid:", authData);
 
     }
     else {
       console.log("no longer authenticated");
+      $location.path('/');
     }
   });
 
@@ -33,6 +29,8 @@ app.controller('dashboardCtrl', function($scope, $firebaseAuth, $location, userB
     });
 
 });
+
+
 
 app.filter('capitalize', function() {
     return function(input) {

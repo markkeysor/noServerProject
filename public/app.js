@@ -1,56 +1,51 @@
 var app = angular.module('maggsLashes', ['ngRoute', 'ui.calendar', 'firebase']);
 
-app.config(function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'app/templates/indexTmpl.html',
-      controller: 'mainCtrl'
-    })
 
-  .when('/about', {
-    templateUrl: 'app/templates/aboutTmpl.html',
-    controller: 'aboutCtrl'
-  })
+	app.config(function($routeProvider) {
+	  $routeProvider
+	    .when('/', {
+	      templateUrl: 'app/templates/indexTmpl.html',
+	      controller: 'mainCtrl'
+	    })
 
-  .when('/sign-in-up', {
-    templateUrl: 'app/templates/registerTmpl.html',
-    controller: 'usersCtrl'
-  })
+	  .when('/about', {
+	    templateUrl: 'app/templates/aboutTmpl.html',
+	    controller: 'aboutCtrl'
+	  })
 
-  .when('/dashboard/:id', {
-      templateUrl: 'app/templates/dashboardTmpl.html',
-      controller: 'dashboardCtrl',
-			resolve: {
-				userBoiId: function($route){
-					return $route.current.params.id
+	  .when('/sign-in-up', {
+	    templateUrl: 'app/templates/registerTmpl.html',
+	    controller: 'usersCtrl'
+	  })
+
+	  .when('/dashboard/:id', {
+	      templateUrl: 'app/templates/dashboardTmpl.html',
+	      controller: 'dashboardCtrl',
+				resolve: {
+					userBoiId: function($route){
+						return $route.current.params.id;
+					},
 				}
-				//   // controller will not be loaded until $requireAuth resolves
-				//   // Auth refers to our $firebaseAuth wrapper in the example above
-					"currentAuth": ["Auth", function(Auth) {
-						// $requireAuth returns a promise so the resolve waits for it to complete
-						// If the promise is rejected, it will throw a $stateChangeError (see above)
-						return Auth.$requireAuth();
-					}]
-			}
 
-		})
-		// .when('/dashboard', {
-		// 		url: '/dashboard/:id'
-		// })
+			})
+			.when('/dashboard', {
+					templateUrl: 'app/templates/signedInTmpl.html',
+					controller: 'signedInCtrl'
+			})
 
 
-.when('/calendar', {
-  templateUrl: 'app/templates/calendarTmpl.html',
-  controller: 'calendarCtrl',
-  resolve: {
-    getappts: function(appointmentService) {
-      return appointmentService.retrieveAppt();
-    }
-  }
-})
+	.when('/calendar', {
+	  templateUrl: 'app/templates/calendarTmpl.html',
+	  controller: 'calendarCtrl',
+	  resolve: {
+	    getappts: function(appointmentService) {
+	      return appointmentService.retrieveAppt();
+	    }
+	  }
+	})
 
 
-.otherwise({
-  redirectTo: '/'
-});
+	.otherwise({
+	  redirectTo: '/'
+	});
 });

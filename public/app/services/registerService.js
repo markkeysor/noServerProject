@@ -1,7 +1,7 @@
 app.service('registerService', function($http, $q) {
 
   this.addUser = function(user) {
-    console.log('user in service',user)
+    console.log('user in service',user);
     var dfd = $q.defer();
     $http({
       method: 'POST',
@@ -27,5 +27,11 @@ app.service('registerService', function($http, $q) {
         url: '/user?_id=' + _id
       });
     };
+
+  this.user;
+
+  this.setUser = function(user){
+    this.user = user;
+  }
 
 });

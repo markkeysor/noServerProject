@@ -22,7 +22,6 @@ app.controller('usersCtrl', function($scope, registerService, $location) {
   };
 
   $scope.logUserIn = function(user) {
-    // registerService.setEmail(user.email)
     var ref = new Firebase("https://maggslashes.firebaseio.com/");
     ref.authWithPassword({
      email    : user.email,
@@ -32,11 +31,10 @@ app.controller('usersCtrl', function($scope, registerService, $location) {
        console.log("Login Failed!", error);
      } else {
       console.log("Authenticated successfully with payload:", authData);
-      //  console.log(currentUser)
       registerService.findByEmail(user.email)
         .then(function(response){
+          registerService.setUser(response.data[0]._id)
           $location.path('/dashboard/' + response.data[0]._id);
-          // $scope.$apply();
         })
      }
      }, {

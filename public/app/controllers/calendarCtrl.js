@@ -1,31 +1,13 @@
-app.controller('calendarCtrl', function($scope, appointmentService, getappts){
+app.controller('calendarCtrl', function($scope, appointmentService, registerService, getappts){
+  // console.log('doodoo bunz');
+  $scope.userId = registerService.user;
+  // console.log($scope.userId);
 
   $scope.eventSources = [
     { events: getappts
 
     }
 ];
-
-// $scope.eventSources1 = [
-//   { events: getappts
-//     // [
-//     //   {
-//     //     title : 'Test Event',
-//     //     start : '2015-08-31T10:00:00',
-//     //     end : '2015-08-31T10:00:00',
-//     //     _id: "1231242432",
-//     //     __v: 1
-//     //   },
-//     //   {
-//     //     title : 'Test Event',
-//     //     start : '2015-09-01T10:00:00',
-//     //     end : '2015-09-01T10:00:00',
-//     //     _id: "1231242432",
-//     //     __v: 1
-//     //   }
-//     // ]
-//   }
-// ];
 
   /* config object */
   $scope.uiConfig = {
@@ -139,6 +121,7 @@ $scope.modalShown = false;
      title : service.name,
      start : $scope.momentSelected,
      end : endTime.format("YYYY-MM-DDTHH:mm:ss"),
+     user: $scope.userId
    };
 
    $scope.eventSources[0].events.push(newEvent);
