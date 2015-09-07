@@ -28,7 +28,14 @@ app.controller('dashboardCtrl', function($scope, $firebaseAuth, $location, userB
       $scope.user = response.data[0];
     });
 
+  appointmentService.userAppointments(userBoiId)
+    .then(function(response) {
+      // console.log(response);
+      $scope.appointments = response;
+    });
+
 });
+
 
 
 

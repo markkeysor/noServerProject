@@ -129,23 +129,7 @@ $scope.modalShown = false;
    appointmentService.addAppointment(newEvent);
  };
 
- // $scope.addNewEventCaylee = function(service) {
- //   var endTime = moment($scope.momentSelected).add(service.value, 'm');
- //   var newEvent = {
- //     title : service.name,
- //     start : $scope.momentSelected,
- //     end : endTime.format("YYYY-MM-DDTHH:mm:ss"),
- //   };
- //
- //   $scope.eventSources1[0].events.push(newEvent);
- //   $scope.toggleModal();
- //   appointmentService.addAppointment(newEvent);
- // };
 
-//  $(function() {
-//     var select="maggie";
-//     $("#dropdown").val(select);
-// });
 
 
 });
